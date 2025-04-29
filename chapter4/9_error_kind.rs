@@ -1,0 +1,4 @@
+enum ErrKind {
+    Caution,
+    Danger,
+}

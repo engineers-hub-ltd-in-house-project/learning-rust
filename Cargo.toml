@@ -4,6 +4,17 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+rand = "0.8.5"
+eframe = "0.21.0"
+egui = "0.21.0"
+axum = "0.6.9"
+hyper = { version = "0.14", features = ["full"] }
+tokio = { version = "1.25", features = ["full"] }
+tower = { version = "0.4", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+axum-template = "0.14.0"
+tera = "1.17.1"
 
 [[example]]
 name = "chap1_1_hello_world"
@@ -22,12 +33,28 @@ name = "chap2_1_variables"
 path = "chapter2/1_variables.rs"
 
 [[example]]
+name = "chap2_2_variable_reassign_error"
+path = "chapter2/2_variable_reassign_error.rs"
+
+[[example]]
 name = "chap2_3_mut_variable"
 path = "chapter2/3_mut_variable.rs"
 
 [[example]]
+name = "chap2_4_variable_shadowing"
+path = "chapter2/4_variable_shadowing.rs"
+
+[[example]]
+name = "chap2_5_const"
+path = "chapter2/5_const.rs"
+
+[[example]]
 name = "chap2_6_if_statement"
 path = "chapter2/6_if_statement.rs"
+
+[[example]]
+name = "chap2_7_elseif"
+path = "chapter2/7_elseif.rs"
 
 [[example]]
 name = "chap2_8_match"
@@ -54,16 +81,64 @@ name = "chap2_13_array_sum"
 path = "chapter2/13_array_sum.rs"
 
 [[example]]
+name = "chap2_14_scope_error"
+path = "chapter2/14_scope_error.rs"
+
+[[example]]
+name = "chap2_15_array_sum"
+path = "chapter2/15_array_sum.rs"
+
+[[example]]
 name = "chap2_16_tuple"
 path = "chapter2/16_tuple.rs"
+
+[[example]]
+name = "chap2_17_tuple_destructure"
+path = "chapter2/17_tuple_destructure.rs"
+
+[[example]]
+name = "chap2_18_tuple_const"
+path = "chapter2/18_tuple_const.rs"
+
+[[example]]
+name = "chap2_19_vector"
+path = "chapter2/19_vector.rs"
+
+[[example]]
+name = "chap2_20_vector_init"
+path = "chapter2/20_vector_init.rs"
+
+[[example]]
+name = "chap2_21_vector_modify"
+path = "chapter2/21_vector_modify.rs"
 
 [[example]]
 name = "chap2_22_hashmap"
 path = "chapter2/22_hashmap.rs"
 
 [[example]]
+name = "chap2_23_hashmap_value"
+path = "chapter2/23_hashmap_value.rs"
+
+[[example]]
+name = "chap2_24_hashmap_loop"
+path = "chapter2/24_hashmap_loop.rs"
+
+[[example]]
 name = "chap2_25_string"
 path = "chapter2/25_string.rs"
+
+[[example]]
+name = "chap2_26_string_push"
+path = "chapter2/26_string_push.rs"
+
+[[example]]
+name = "chap2_27_string_insert"
+path = "chapter2/27_string_insert.rs"
+
+[[example]]
+name = "chap2_28_string_slice"
+path = "chapter2/28_string_slice.rs"
 
 [[example]]
 name = "chap2_29_function"
@@ -182,21 +257,389 @@ name = "chap3_23_trait"
 path = "chapter3/23_trait.rs"
 
 [[example]]
+name = "chap3_24_trait_function_arg"
+path = "chapter3/24_trait_function_arg.rs"
+
+[[example]]
+name = "chap3_25_trait_function_ref"
+path = "chapter3/25_trait_function_ref.rs"
+
+[[example]]
+name = "chap3_26_trait_function_ref_usage"
+path = "chapter3/26_trait_function_ref_usage.rs"
+
+[[example]]
+name = "chap3_27_trait_impl_print"
+path = "chapter3/27_trait_impl_print.rs"
+
+[[example]]
+name = "chap3_28_trait_impl_usage"
+path = "chapter3/28_trait_impl_usage.rs"
+
+[[example]]
+name = "chap3_29_trait_box"
+path = "chapter3/29_trait_box.rs"
+
+[[example]]
+name = "chap3_30_trait_box_usage"
+path = "chapter3/30_trait_box_usage.rs"
+
+[[example]]
+name = "chap3_31_debug_trait"
+path = "chapter3/31_debug_trait.rs"
+
+[[example]]
+name = "chap3_32_default_trait"
+path = "chapter3/32_default_trait.rs"
+
+[[example]]
 name = "chap3_33_generic"
 path = "chapter3/33_generic.rs"
+
+[[example]]
+name = "chap3_34_generic_fn"
+path = "chapter3/34_generic_fn.rs"
+
+[[example]]
+name = "chap3_35_generic_impl"
+path = "chapter3/35_generic_impl.rs"
+
+[[example]]
+name = "chap3_36_trait_box_setup"
+path = "chapter3/36_trait_box_setup.rs"
+
+[[example]]
+name = "chap3_37_trait_box_usage"
+path = "chapter3/37_trait_box_usage.rs"
+
+[[example]]
+name = "chap3_38_trait_dyn"
+path = "chapter3/38_trait_dyn.rs"
+
+[[example]]
+name = "chap3_39_enum_kind"
+path = "chapter3/39_enum_kind.rs"
 
 [[example]]
 name = "chap4_1_option"
 path = "chapter4/1_option.rs"
 
 [[example]]
+name = "chap4_2_option_vec"
+path = "chapter4/2_option_vec.rs"
+
+[[example]]
+name = "chap4_3_option_random"
+path = "chapter4/3_option_random.rs"
+
+[[example]]
+name = "chap4_4_option_match"
+path = "chapter4/4_option_match.rs"
+
+[[example]]
+name = "chap4_5_option_panic"
+path = "chapter4/5_option_panic.rs"
+
+[[example]]
 name = "chap4_6_result"
 path = "chapter4/6_result.rs"
+
+[[example]]
+name = "chap4_7_option_result"
+path = "chapter4/7_option_result.rs"
+
+[[example]]
+name = "chap4_8_result_match"
+path = "chapter4/8_result_match.rs"
+
+[[example]]
+name = "chap4_9_error_kind"
+path = "chapter4/9_error_kind.rs"
+
+[[example]]
+name = "chap4_10_error_kind_usage"
+path = "chapter4/10_error_kind_usage.rs"
 
 [[example]]
 name = "chap4_11_thread"
 path = "chapter4/11_thread.rs"
 
 [[example]]
+name = "chap4_12_thread_sleep"
+path = "chapter4/12_thread_sleep.rs"
+
+[[example]]
+name = "chap4_13_thread_loop"
+path = "chapter4/13_thread_loop.rs"
+
+[[example]]
+name = "chap4_14_thread_wait"
+path = "chapter4/14_thread_wait.rs"
+
+[[example]]
+name = "chap4_15_thread_join"
+path = "chapter4/15_thread_join.rs"
+
+[[example]]
+name = "chap4_16_thread_join_all"
+path = "chapter4/16_thread_join_all.rs"
+
+[[example]]
+name = "chap4_17_thread_move"
+path = "chapter4/17_thread_move.rs"
+
+[[example]]
+name = "chap4_18_thread_mutex"
+path = "chapter4/18_thread_mutex.rs"
+
+[[example]]
+name = "chap4_19_thread_mutex_scope"
+path = "chapter4/19_thread_mutex_scope.rs"
+
+[[example]]
+name = "chap4_20_deadlock"
+path = "chapter4/20_deadlock.rs"
+
+[[example]]
+name = "chap4_21_thread_channel"
+path = "chapter4/21_thread_channel.rs"
+
+[[example]]
+name = "chap4_22_thread_dual_channel"
+path = "chapter4/22_thread_dual_channel.rs"
+
+[[example]]
+name = "chap4_23_thread_sync_channel"
+path = "chapter4/23_thread_sync_channel.rs"
+
+[[example]]
 name = "chap4_24_file_read"
 path = "chapter4/24_file_read.rs"
+
+[[example]]
+name = "chap4_25_file_read_error"
+path = "chapter4/25_file_read_error.rs"
+
+[[example]]
+name = "chap4_26_file_write"
+path = "chapter4/26_file_write.rs"
+
+[[example]]
+name = "chap4_27_file_append"
+path = "chapter4/27_file_append.rs"
+
+[[example]]
+name = "chap4_28_dir_read"
+path = "chapter4/28_dir_read.rs"
+
+[[example]]
+name = "chap4_29_dir_file_type"
+path = "chapter4/29_dir_file_type.rs"
+
+[[example]]
+name = "chap4_30_file_backup"
+path = "chapter4/30_file_backup.rs"
+
+[[example]]
+name = "chap5_1_eframe_setup"
+path = "chapter5/1_eframe_setup.rs"
+
+[[example]]
+name = "chap5_3_central_panel"
+path = "chapter5/3_central_panel.rs"
+
+[[example]]
+name = "chap5_4_light_theme"
+path = "chapter5/4_light_theme.rs"
+
+[[example]]
+name = "chap5_5_label"
+path = "chapter5/5_label.rs"
+
+[[example]]
+name = "chap5_6_label_style"
+path = "chapter5/6_label_style.rs"
+
+[[example]]
+name = "chap5_7_button"
+path = "chapter5/7_button.rs"
+
+[[example]]
+name = "chap5_8_checkbox_setup"
+path = "chapter5/8_checkbox_setup.rs"
+
+[[example]]
+name = "chap5_9_checkbox"
+path = "chapter5/9_checkbox.rs"
+
+[[example]]
+name = "chap5_10_radio_enum"
+path = "chapter5/10_radio_enum.rs"
+
+[[example]]
+name = "chap5_11_radio_setup"
+path = "chapter5/11_radio_setup.rs"
+
+[[example]]
+name = "chap5_12_radio"
+path = "chapter5/12_radio.rs"
+
+[[example]]
+name = "chap5_13_slider_setup"
+path = "chapter5/13_slider_setup.rs"
+
+[[example]]
+name = "chap5_14_slider"
+path = "chapter5/14_slider.rs"
+
+[[example]]
+name = "chap5_15_drag_value"
+path = "chapter5/15_drag_value.rs"
+
+[[example]]
+name = "chap5_16_selectable_enum"
+path = "chapter5/16_selectable_enum.rs"
+
+[[example]]
+name = "chap5_17_selectable_setup"
+path = "chapter5/17_selectable_setup.rs"
+
+[[example]]
+name = "chap5_18_selectable"
+path = "chapter5/18_selectable.rs"
+
+[[example]]
+name = "chap5_19_textEdit_setup"
+path = "chapter5/19_textEdit_setup.rs"
+
+[[example]]
+name = "chap5_20_textEdit"
+path = "chapter5/20_textEdit.rs"
+
+[[example]]
+name = "chap5_21_textEdit_changed"
+path = "chapter5/21_textEdit_changed.rs"
+
+[[example]]
+name = "chap5_22_painter_setup"
+path = "chapter5/22_painter_setup.rs"
+
+[[example]]
+name = "chap5_23_painter_rect"
+path = "chapter5/23_painter_rect.rs"
+
+[[example]]
+name = "chap5_24_painter_rect_vars"
+path = "chapter5/24_painter_rect_vars.rs"
+
+[[example]]
+name = "chap5_25_painter_circle"
+path = "chapter5/25_painter_circle.rs"
+
+[[example]]
+name = "chap5_26_painter_line"
+path = "chapter5/26_painter_line.rs"
+
+[[example]]
+name = "chap5_27_painter_text"
+path = "chapter5/27_painter_text.rs"
+
+[[example]]
+name = "chap5_28_painter_path"
+path = "chapter5/28_painter_path.rs"
+
+[[example]]
+name = "chap5_29_painter_click_setup"
+path = "chapter5/29_painter_click_setup.rs"
+
+[[example]]
+name = "chap5_30_painter_click"
+path = "chapter5/30_painter_click.rs"
+
+[[example]]
+name = "chap6_1_axum_hello"
+path = "chapter6/1_axum_hello.rs"
+
+[[example]]
+name = "chap6_2_axum_handler"
+path = "chapter6/2_axum_handler.rs"
+
+[[example]]
+name = "chap6_4_axum_param_route"
+path = "chapter6/4_axum_param_route.rs"
+
+[[example]]
+name = "chap6_5_axum_param"
+path = "chapter6/5_axum_param.rs"
+
+[[example]]
+name = "chap6_6_axum_multi_param_route"
+path = "chapter6/6_axum_multi_param_route.rs"
+
+[[example]]
+name = "chap6_7_axum_multi_param"
+path = "chapter6/7_axum_multi_param.rs"
+
+[[example]]
+name = "chap6_8_axum_query_route"
+path = "chapter6/8_axum_query_route.rs"
+
+[[example]]
+name = "chap6_9_axum_query"
+path = "chapter6/9_axum_query.rs"
+
+[[example]]
+name = "chap6_10_cargo_serde"
+path = "chapter6/10_cargo_serde.rs"
+
+[[example]]
+name = "chap6_11_use_serde"
+path = "chapter6/11_use_serde.rs"
+
+[[example]]
+name = "chap6_12_axum_json_route"
+path = "chapter6/12_axum_json_route.rs"
+
+[[example]]
+name = "chap6_13_mydata_struct"
+path = "chapter6/13_mydata_struct.rs"
+
+[[example]]
+name = "chap6_14_axum_json"
+path = "chapter6/14_axum_json.rs"
+
+[[example]]
+name = "chap6_15_cargo_tera"
+path = "chapter6/15_cargo_tera.rs"
+
+[[example]]
+name = "chap6_16_tera_template"
+path = "chapter6/16_tera_template.rs"
+
+[[example]]
+name = "chap6_17_axum_tera"
+path = "chapter6/17_axum_tera.rs"
+
+[[example]]
+name = "chap6_18_axum_tera_handler"
+path = "chapter6/18_axum_tera_handler.rs"
+
+[[example]]
+name = "chap6_19_tera_form_template"
+path = "chapter6/19_tera_form_template.rs"
+
+[[example]]
+name = "chap6_20_axum_form_route"
+path = "chapter6/20_axum_form_route.rs"
+
+[[example]]
+name = "chap6_21_serde_use"
+path = "chapter6/21_serde_use.rs"
+
+[[example]]
+name = "chap6_22_form_struct"
+path = "chapter6/22_form_struct.rs"
+
+[[example]]
+name = "chap6_23_form_handler"
+path = "chapter6/23_form_handler.rs"
