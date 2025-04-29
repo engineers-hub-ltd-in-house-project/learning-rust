@@ -1,6 +1,6 @@
 fn main() {
-    let data = [12, 34, 56, 78, 90];
-    let mut ans = 0;
+    let data: [i32; 5] = [12, 34, 56, 78, 90];
+    let mut ans: i32 = 0;
     for item in data {
         ans += item;
     }

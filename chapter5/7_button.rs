@@ -3,14 +3,14 @@
  *
  * この例では、eguiフレームワークでボタンを実装し、そのクリックイベントを処理する方法を示しています。
  * ボタンはGUIアプリケーションの基本的な要素で、ユーザー操作の入り口となります。
- * 
+ *
  * このサンプルで学べること：
  * 1. ボタンの作成と表示
  * 2. ボタンのスタイル設定（サイズ、フォント）
  * 3. クリックイベントの処理
  * 4. クリック回数を保持する状態管理
  * 5. クリックに応じた表示内容の更新
- * 
+ *
  * ボタンは、ui.add()メソッドでUIに追加し、返される応答（Response）オブジェクトの
  * clicked()メソッドでクリックイベントを検出できます。
  */
@@ -58,12 +58,12 @@ impl eframe::App for ButtonApp {
 
             ui.separator();
 
-            let button_text = egui::RichText::new("Click Me!")
-                .font(egui::FontId::proportional(24.0));
+            let button_text =
+                egui::RichText::new("Click Me!").font(egui::FontId::proportional(24.0));
             let button = egui::Button::new(button_text);
-            
+
             let response = ui.add_sized(egui::Vec2 { x: 150.0, y: 40.0 }, button);
-            
+
             if response.clicked() {
                 self.count += 1;
             }

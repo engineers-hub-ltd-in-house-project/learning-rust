@@ -3,12 +3,12 @@
  *
  * この例では、eguiフレームワークの中央パネル（CentralPanel）を使用して
  * GUIアプリケーションのメインコンテンツを表示する方法を示しています。
- * 
+ *
  * 中央パネルの特徴：
  * 1. 画面の中央部分を占めるメインコンテンツ領域
  * 2. サイドパネル、トップパネルなどを配置した後の残りのスペースを自動的に使用
  * 3. シンプルなレイアウトを素早く作成できる
- * 
+ *
  * この例では、CentralPanelを使用して「Hello, World!」というテキストを表示しています。
  */
 
@@ -16,7 +16,7 @@ use eframe::egui;
 
 fn main() {
     let options = eframe::NativeOptions::default();
-    
+
     eframe::run_native(
         "中央パネルの例",
         options,

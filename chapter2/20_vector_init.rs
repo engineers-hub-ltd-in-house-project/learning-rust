@@ -1,6 +1,6 @@
 fn main() {
-    let data = vec![123, 456, 789];
-    let mut result = 0;
+    let data: Vec<i32> = vec![123, 456, 789];
+    let mut result: i32 = 0;
     for item in data {
         result += item;
     }

@@ -4,13 +4,13 @@
  * この例では、Rustでデスクトップアプリケーションを開発するためのeframeフレームワークの
  * 基本的な設定方法を示しています。eframeはegui（Easy GUI）を使用したクロスプラットフォームの
  * GUIフレームワークです。
- * 
+ *
  * この例で学べる内容：
  * 1. eframeアプリケーションの基本構造
  * 2. アプリケーションの状態を保持する構造体の定義
  * 3. eframe::AppトレイトとDefault実装の関係
  * 4. 空のアプリケーションウィンドウの作成
- * 
+ *
  * eframeの特徴：
  * - WebAssemblyとネイティブの両方に対応
  * - シンプルなAPI
@@ -23,12 +23,12 @@ use eframe::egui;
 fn main() {
     // eframeの設定オプション
     let options = eframe::NativeOptions::default();
-    
+
     // アプリケーションの起動
     let _ = eframe::run_native(
-        "My egui App",  // ウィンドウタイトル
+        "My egui App", // ウィンドウタイトル
         options,
-        Box::new(|_cc| Box::new(MyApp::default()))
+        Box::new(|_cc| Box::new(MyApp::default())),
     );
 }
 

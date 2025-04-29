@@ -1,8 +1,8 @@
 fn main() {
-    let taro = ("Taro", 39, true);
-    let hanako = ("Hanako", 28, false);
-    let (name, age, male) = taro;
+    let taro: (&str, i32, bool) = ("Taro", 39, true);
+    let hanako: (&str, i32, bool) = ("Hanako", 28, false);
+    let (name, age, male): (&str, i32, bool) = taro;
     println!("name:{}, age:{}, male?:{}", name, age, male);
-    let (name, age, male) = hanako;
+    let (name, age, male): (&str, i32, bool) = hanako;
     println!("name:{}, age:{}, male?:{}", name, age, male);
 }

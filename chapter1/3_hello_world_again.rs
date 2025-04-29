@@ -7,5 +7,6 @@
  */
 
 fn main() {
-    println!("Hello, world!");
+    let message: &str = "Hello, world!";
+    println!("{}", message);
 }

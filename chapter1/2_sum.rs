@@ -7,8 +7,8 @@
  */
 
 fn main() {
-    let x = 10;
-    let y = 20;
-    let sum = x + y;
+    let x: i32 = 10;
+    let y: i32 = 20;
+    let sum: i32 = x + y;
     println!("{} + {} = {}", x, y, sum);
 }
