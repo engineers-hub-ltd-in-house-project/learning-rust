@@ -14,26 +14,27 @@
  * 以下はOption<T>の簡易的な定義例です。実際には標準ライブラリで定義されています。
  */
 
-enum Option<T> {
+// 教育目的のため、標準ライブラリのOptionと名前が被らないようにMyOptionとして定義
+enum MyOption<T> {
     Some(T),
     None,
 }
 
 fn main() {
     // 値がある場合
-    let some_value: Option<i32> = Some(42);
+    let some_value: MyOption<i32> = MyOption::Some(42);
 
     // 値がない場合
-    let no_value: Option<i32> = None;
+    let no_value: MyOption<i32> = MyOption::None;
 
     // 値の処理例
     match some_value {
-        Some(value) => println!("値があります: {}", value),
-        None => println!("値がありません"),
+        MyOption::Some(value) => println!("値があります: {}", value),
+        MyOption::None => println!("値がありません"),
     }
 
     match no_value {
-        Some(value) => println!("値があります: {}", value),
-        None => println!("値がありません"),
+        MyOption::Some(value) => println!("値があります: {}", value),
+        MyOption::None => println!("値がありません"),
     }
 }
