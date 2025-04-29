@@ -1,0 +1,202 @@
+[package]
+name = "learning-rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[example]]
+name = "list1_1_hello_world"
+path = "examples/list1_1_hello_world.rs"
+
+[[example]]
+name = "list1_2_sum"
+path = "examples/list1_2_sum.rs"
+
+[[example]]
+name = "list1_3_hello_world_again"
+path = "examples/list1_3_hello_world_again.rs"
+
+[[example]]
+name = "list2_1_variables"
+path = "examples/list2_1_variables.rs"
+
+[[example]]
+name = "list2_3_mut_variable"
+path = "examples/list2_3_mut_variable.rs"
+
+[[example]]
+name = "list2_6_if_statement"
+path = "examples/list2_6_if_statement.rs"
+
+[[example]]
+name = "list2_8_match"
+path = "examples/list2_8_match.rs"
+
+[[example]]
+name = "list2_9_match_or"
+path = "examples/list2_9_match_or.rs"
+
+[[example]]
+name = "list2_10_loop"
+path = "examples/list2_10_loop.rs"
+
+[[example]]
+name = "list2_11_while"
+path = "examples/list2_11_while.rs"
+
+[[example]]
+name = "list2_12_for"
+path = "examples/list2_12_for.rs"
+
+[[example]]
+name = "list2_13_array_sum"
+path = "examples/list2_13_array_sum.rs"
+
+[[example]]
+name = "list2_16_tuple"
+path = "examples/list2_16_tuple.rs"
+
+[[example]]
+name = "list2_22_hashmap"
+path = "examples/list2_22_hashmap.rs"
+
+[[example]]
+name = "list2_25_string"
+path = "examples/list2_25_string.rs"
+
+[[example]]
+name = "list2_29_function"
+path = "examples/list2_29_function.rs"
+
+[[example]]
+name = "list2_30_function_calc"
+path = "examples/list2_30_function_calc.rs"
+
+[[example]]
+name = "list2_31_closure"
+path = "examples/list2_31_closure.rs"
+
+[[example]]
+name = "list2_32_closure_capture"
+path = "examples/list2_32_closure_capture.rs"
+
+[[example]]
+name = "list2_33_mutable_closure"
+path = "examples/list2_33_mutable_closure.rs"
+
+[[example]]
+name = "list2_34_mutable_closure_variable"
+path = "examples/list2_34_mutable_closure_variable.rs"
+
+[[example]]
+name = "list3_1_copy_str"
+path = "examples/list3_1_copy_str.rs"
+
+[[example]]
+name = "list3_2_move_string"
+path = "examples/list3_2_move_string.rs"
+
+[[example]]
+name = "list3_3_copy_number"
+path = "examples/list3_3_copy_number.rs"
+
+[[example]]
+name = "list3_4_function_move"
+path = "examples/list3_4_function_move.rs"
+
+[[example]]
+name = "list3_5_function_return"
+path = "examples/list3_5_function_return.rs"
+
+[[example]]
+name = "list3_6_reference"
+path = "examples/list3_6_reference.rs"
+
+[[example]]
+name = "list3_7_reference_scope"
+path = "examples/list3_7_reference_scope.rs"
+
+[[example]]
+name = "list3_8_mut_reference"
+path = "examples/list3_8_mut_reference.rs"
+
+[[example]]
+name = "list3_9_dereference"
+path = "examples/list3_9_dereference.rs"
+
+[[example]]
+name = "list3_10_slice"
+path = "examples/list3_10_slice.rs"
+
+[[example]]
+name = "list3_11_slice_reference"
+path = "examples/list3_11_slice_reference.rs"
+
+[[example]]
+name = "list3_12_slice_copy"
+path = "examples/list3_12_slice_copy.rs"
+
+[[example]]
+name = "list3_13_array_slice"
+path = "examples/list3_13_array_slice.rs"
+
+[[example]]
+name = "list3_14_vector_slice"
+path = "examples/list3_14_vector_slice.rs"
+
+[[example]]
+name = "list3_15_vector_slice_copy"
+path = "examples/list3_15_vector_slice_copy.rs"
+
+[[example]]
+name = "list3_16_struct"
+path = "examples/list3_16_struct.rs"
+
+[[example]]
+name = "list3_17_struct_constructor"
+path = "examples/list3_17_struct_constructor.rs"
+
+[[example]]
+name = "list3_18_struct_constructor_usage"
+path = "examples/list3_18_struct_constructor_usage.rs"
+
+[[example]]
+name = "list3_19_tuple_struct"
+path = "examples/list3_19_tuple_struct.rs"
+
+[[example]]
+name = "list3_20_struct_reference"
+path = "examples/list3_20_struct_reference.rs"
+
+[[example]]
+name = "list3_21_struct_method"
+path = "examples/list3_21_struct_method.rs"
+
+[[example]]
+name = "list3_22_static_method"
+path = "examples/list3_22_static_method.rs"
+
+[[example]]
+name = "list3_23_trait"
+path = "examples/list3_23_trait.rs"
+
+[[example]]
+name = "list3_33_generic"
+path = "examples/list3_33_generic.rs"
+
+[[example]]
+name = "list4_1_option"
+path = "examples/list4_1_option.rs"
+
+[[example]]
+name = "list4_6_result"
+path = "examples/list4_6_result.rs"
+
+[[example]]
+name = "list4_11_thread"
+path = "examples/list4_11_thread.rs"
+
+[[example]]
+name = "list4_24_file_read"
+path = "examples/list4_24_file_read.rs"
