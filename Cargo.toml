@@ -6,197 +6,197 @@ edition = "2021"
 [dependencies]
 
 [[example]]
-name = "list1_1_hello_world"
-path = "examples/list1_1_hello_world.rs"
+name = "chap1_1_hello_world"
+path = "chapter1/1_hello_world.rs"
 
 [[example]]
-name = "list1_2_sum"
-path = "examples/list1_2_sum.rs"
+name = "chap1_2_sum"
+path = "chapter1/2_sum.rs"
 
 [[example]]
-name = "list1_3_hello_world_again"
-path = "examples/list1_3_hello_world_again.rs"
+name = "chap1_3_hello_world_again"
+path = "chapter1/3_hello_world_again.rs"
 
 [[example]]
-name = "list2_1_variables"
-path = "examples/list2_1_variables.rs"
+name = "chap2_1_variables"
+path = "chapter2/1_variables.rs"
 
 [[example]]
-name = "list2_3_mut_variable"
-path = "examples/list2_3_mut_variable.rs"
+name = "chap2_3_mut_variable"
+path = "chapter2/3_mut_variable.rs"
 
 [[example]]
-name = "list2_6_if_statement"
-path = "examples/list2_6_if_statement.rs"
+name = "chap2_6_if_statement"
+path = "chapter2/6_if_statement.rs"
 
 [[example]]
-name = "list2_8_match"
-path = "examples/list2_8_match.rs"
+name = "chap2_8_match"
+path = "chapter2/8_match.rs"
 
 [[example]]
-name = "list2_9_match_or"
-path = "examples/list2_9_match_or.rs"
+name = "chap2_9_match_or"
+path = "chapter2/9_match_or.rs"
 
 [[example]]
-name = "list2_10_loop"
-path = "examples/list2_10_loop.rs"
+name = "chap2_10_loop"
+path = "chapter2/10_loop.rs"
 
 [[example]]
-name = "list2_11_while"
-path = "examples/list2_11_while.rs"
+name = "chap2_11_while"
+path = "chapter2/11_while.rs"
 
 [[example]]
-name = "list2_12_for"
-path = "examples/list2_12_for.rs"
+name = "chap2_12_for"
+path = "chapter2/12_for.rs"
 
 [[example]]
-name = "list2_13_array_sum"
-path = "examples/list2_13_array_sum.rs"
+name = "chap2_13_array_sum"
+path = "chapter2/13_array_sum.rs"
 
 [[example]]
-name = "list2_16_tuple"
-path = "examples/list2_16_tuple.rs"
+name = "chap2_16_tuple"
+path = "chapter2/16_tuple.rs"
 
 [[example]]
-name = "list2_22_hashmap"
-path = "examples/list2_22_hashmap.rs"
+name = "chap2_22_hashmap"
+path = "chapter2/22_hashmap.rs"
 
 [[example]]
-name = "list2_25_string"
-path = "examples/list2_25_string.rs"
+name = "chap2_25_string"
+path = "chapter2/25_string.rs"
 
 [[example]]
-name = "list2_29_function"
-path = "examples/list2_29_function.rs"
+name = "chap2_29_function"
+path = "chapter2/29_function.rs"
 
 [[example]]
-name = "list2_30_function_calc"
-path = "examples/list2_30_function_calc.rs"
+name = "chap2_30_function_calc"
+path = "chapter2/30_function_calc.rs"
 
 [[example]]
-name = "list2_31_closure"
-path = "examples/list2_31_closure.rs"
+name = "chap2_31_closure"
+path = "chapter2/31_closure.rs"
 
 [[example]]
-name = "list2_32_closure_capture"
-path = "examples/list2_32_closure_capture.rs"
+name = "chap2_32_closure_capture"
+path = "chapter2/32_closure_capture.rs"
 
 [[example]]
-name = "list2_33_mutable_closure"
-path = "examples/list2_33_mutable_closure.rs"
+name = "chap2_33_mutable_closure"
+path = "chapter2/33_mutable_closure.rs"
 
 [[example]]
-name = "list2_34_mutable_closure_variable"
-path = "examples/list2_34_mutable_closure_variable.rs"
+name = "chap2_34_mutable_closure_variable"
+path = "chapter2/34_mutable_closure_variable.rs"
 
 [[example]]
-name = "list3_1_copy_str"
-path = "examples/list3_1_copy_str.rs"
+name = "chap3_1_copy_str"
+path = "chapter3/1_copy_str.rs"
 
 [[example]]
-name = "list3_2_move_string"
-path = "examples/list3_2_move_string.rs"
+name = "chap3_2_move_string"
+path = "chapter3/2_move_string.rs"
 
 [[example]]
-name = "list3_3_copy_number"
-path = "examples/list3_3_copy_number.rs"
+name = "chap3_3_copy_number"
+path = "chapter3/3_copy_number.rs"
 
 [[example]]
-name = "list3_4_function_move"
-path = "examples/list3_4_function_move.rs"
+name = "chap3_4_function_move"
+path = "chapter3/4_function_move.rs"
 
 [[example]]
-name = "list3_5_function_return"
-path = "examples/list3_5_function_return.rs"
+name = "chap3_5_function_return"
+path = "chapter3/5_function_return.rs"
 
 [[example]]
-name = "list3_6_reference"
-path = "examples/list3_6_reference.rs"
+name = "chap3_6_reference"
+path = "chapter3/6_reference.rs"
 
 [[example]]
-name = "list3_7_reference_scope"
-path = "examples/list3_7_reference_scope.rs"
+name = "chap3_7_reference_scope"
+path = "chapter3/7_reference_scope.rs"
 
 [[example]]
-name = "list3_8_mut_reference"
-path = "examples/list3_8_mut_reference.rs"
+name = "chap3_8_mut_reference"
+path = "chapter3/8_mut_reference.rs"
 
 [[example]]
-name = "list3_9_dereference"
-path = "examples/list3_9_dereference.rs"
+name = "chap3_9_dereference"
+path = "chapter3/9_dereference.rs"
 
 [[example]]
-name = "list3_10_slice"
-path = "examples/list3_10_slice.rs"
+name = "chap3_10_slice"
+path = "chapter3/10_slice.rs"
 
 [[example]]
-name = "list3_11_slice_reference"
-path = "examples/list3_11_slice_reference.rs"
+name = "chap3_11_slice_reference"
+path = "chapter3/11_slice_reference.rs"
 
 [[example]]
-name = "list3_12_slice_copy"
-path = "examples/list3_12_slice_copy.rs"
+name = "chap3_12_slice_copy"
+path = "chapter3/12_slice_copy.rs"
 
 [[example]]
-name = "list3_13_array_slice"
-path = "examples/list3_13_array_slice.rs"
+name = "chap3_13_array_slice"
+path = "chapter3/13_array_slice.rs"
 
 [[example]]
-name = "list3_14_vector_slice"
-path = "examples/list3_14_vector_slice.rs"
+name = "chap3_14_vector_slice"
+path = "chapter3/14_vector_slice.rs"
 
 [[example]]
-name = "list3_15_vector_slice_copy"
-path = "examples/list3_15_vector_slice_copy.rs"
+name = "chap3_15_vector_slice_copy"
+path = "chapter3/15_vector_slice_copy.rs"
 
 [[example]]
-name = "list3_16_struct"
-path = "examples/list3_16_struct.rs"
+name = "chap3_16_struct"
+path = "chapter3/16_struct.rs"
 
 [[example]]
-name = "list3_17_struct_constructor"
-path = "examples/list3_17_struct_constructor.rs"
+name = "chap3_17_struct_constructor"
+path = "chapter3/17_struct_constructor.rs"
 
 [[example]]
-name = "list3_18_struct_constructor_usage"
-path = "examples/list3_18_struct_constructor_usage.rs"
+name = "chap3_18_struct_constructor_usage"
+path = "chapter3/18_struct_constructor_usage.rs"
 
 [[example]]
-name = "list3_19_tuple_struct"
-path = "examples/list3_19_tuple_struct.rs"
+name = "chap3_19_tuple_struct"
+path = "chapter3/19_tuple_struct.rs"
 
 [[example]]
-name = "list3_20_struct_reference"
-path = "examples/list3_20_struct_reference.rs"
+name = "chap3_20_struct_reference"
+path = "chapter3/20_struct_reference.rs"
 
 [[example]]
-name = "list3_21_struct_method"
-path = "examples/list3_21_struct_method.rs"
+name = "chap3_21_struct_method"
+path = "chapter3/21_struct_method.rs"
 
 [[example]]
-name = "list3_22_static_method"
-path = "examples/list3_22_static_method.rs"
+name = "chap3_22_static_method"
+path = "chapter3/22_static_method.rs"
 
 [[example]]
-name = "list3_23_trait"
-path = "examples/list3_23_trait.rs"
+name = "chap3_23_trait"
+path = "chapter3/23_trait.rs"
 
 [[example]]
-name = "list3_33_generic"
-path = "examples/list3_33_generic.rs"
+name = "chap3_33_generic"
+path = "chapter3/33_generic.rs"
 
 [[example]]
-name = "list4_1_option"
-path = "examples/list4_1_option.rs"
+name = "chap4_1_option"
+path = "chapter4/1_option.rs"
 
 [[example]]
-name = "list4_6_result"
-path = "examples/list4_6_result.rs"
+name = "chap4_6_result"
+path = "chapter4/6_result.rs"
 
 [[example]]
-name = "list4_11_thread"
-path = "examples/list4_11_thread.rs"
+name = "chap4_11_thread"
+path = "chapter4/11_thread.rs"
 
 [[example]]
-name = "list4_24_file_read"
-path = "examples/list4_24_file_read.rs"
+name = "chap4_24_file_read"
+path = "chapter4/24_file_read.rs"
