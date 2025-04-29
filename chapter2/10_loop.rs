@@ -1,13 +1,34 @@
+/*
+ * loopによる繰り返し
+ *
+ * この例では、Rustのloop文を使用した無限ループと、
+ * breakを使用してループから抜け出す方法を示しています。
+ * 
+ * loop文の特徴：
+ * 1. 明示的に停止するまで永遠に繰り返す
+ * 2. breakキーワードでループを終了できる
+ * 3. continueキーワードで次の繰り返しに進むことができる
+ * 4. breakで値を返すことができる
+ * 
+ * この例では、カウンタを使って特定の回数だけループし、
+ * 条件を満たしたらbreakでループを終了しています。
+ */
+
 fn main() {
-    let max = 100;
-    let mut ans = 0;
-    let mut count = 1;
+    let mut count = 0;
+    
+    // loop文による無限ループ
     loop {
-        if count > max {
+        println!("カウント: {}", count);
+        
+        count += 1;
+        
+        // 条件を満たしたらループを終了
+        if count >= 5 {
+            println!("ループを終了します");
             break;
         }
-        ans += count;
-        count += 1;
     }
-    println!("1から{}までの合計は、{} です。", max, ans);
+    
+    println!("ループ後のカウント: {}", count);
 }

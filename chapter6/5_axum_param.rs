@@ -1,3 +1,20 @@
-async fn handler_param(axum::extract::Path(user_id): axum::extract::Path<String>) -> String {
-    format!("User ID: {}", user_id)
+/*
+ * Axumのパスパラメータ
+ *
+ * この例では、Axumフレームワークでのパスパラメータ（URLの一部として渡される値）の
+ * 取得と使用方法を示しています。
+ * 
+ * パスパラメータの特徴：
+ * 1. URLの一部として直接埋め込まれる値
+ * 2. /:name のように:を使って定義される
+ * 3. ハンドラー関数の引数として自動的に抽出される
+ * 4. 適切な型に変換される（型安全）
+ * 
+ * この例では、/users/:idのようなURLからidパラメータを抽出し、
+ * その値をレスポンスで使用する方法を示しています。
+ */
+
+// ユーザーIDを受け取るハンドラー
+async fn user_handler(id: axum::extract::Path<u32>) -> String {
+    format!("ユーザーID: {}", id)
 }

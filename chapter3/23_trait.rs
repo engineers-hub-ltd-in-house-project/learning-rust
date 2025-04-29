@@ -1,4 +1,23 @@
-trait Print {
+/*
+ * トレイトの実装
+ *
+ * トレイトは、Rustでインターフェースに相当する機能です。
+ * 複数の型に共通の振る舞いを定義することができます。
+ * 
+ * この例では：
+ * 1. Printableトレイトを定義し、print()メソッドを要求しています
+ * 2. 異なる構造体（PersonとBlog）にこのトレイトを実装しています
+ * 3. 各構造体は独自の方法でprint()メソッドを実装しています
+ * 
+ * トレイトを使うメリット：
+ * - コードの再利用性が高まる
+ * - 異なる型に共通のインターフェースを提供できる
+ * - ジェネリックプログラミングの基盤となる
+ * - コードの抽象化レベルを上げられる
+ */
+
+// プリント可能なことを表すトレイト
+trait Printable {
     fn print(&self);
 }
 
@@ -8,7 +27,7 @@ struct Person {
     age: i32,
 }
 
-impl Print for Person {
+impl Printable for Person {
     fn print(&self) {
         println!("{}<{}>({}).", self.name, self.mail, self.age);
     }
@@ -24,7 +43,7 @@ struct Student {
     grade: i32,
 }
 
-impl Print for Student {
+impl Printable for Student {
     fn print(&self) {
         println!("grade{}: {}<{}>.", self.grade, self.name, self.mail);
     }

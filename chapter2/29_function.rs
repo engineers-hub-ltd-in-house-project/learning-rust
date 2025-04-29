@@ -1,8 +1,31 @@
+/*
+ * 関数の定義と使用
+ *
+ * この例では、Rustでの関数の定義と呼び出し方を示しています。
+ * Rustでは関数を使ってコードを整理し、再利用可能な形にすることができます。
+ * 
+ * 関数の特徴：
+ * 1. fnキーワードで定義する
+ * 2. 名前はスネークケース（小文字、アンダースコア区切り）を使う慣習がある
+ * 3. 引数の型を明示的に指定する必要がある
+ * 4. 戻り値の型は -> 記号の後に指定する
+ * 
+ * この例では、挨拶メッセージを生成する関数を定義して呼び出しています。
+ */
+
 fn main() {
-    hello(String::from("taro"));
-    hello(String::from("hanako"));
+    let name = String::from("山田");
+    
+    // 関数を呼び出して結果を取得
+    let message = create_greeting(name);
+    
+    // 結果を表示
+    println!("{}", message);
 }
 
-fn hello(name: String) {
-    println!("Hello, {}!", name);
+// 挨拶を生成する関数
+// nameを引数として受け取り、挨拶文を返す
+fn create_greeting(name: String) -> String {
+    // 最後の式が戻り値になる（returnキーワードは不要）
+    format!("こんにちは、{}さん！", name)
 }

@@ -1,30 +1,52 @@
+/*
+ * スレッドの結合（join）
+ *
+ * この例では、Rustでのスレッドの作成と、joinメソッドを使ったスレッドの結合
+ * （スレッドの完了を待機する）方法を示しています。
+ * 
+ * スレッド結合の特徴：
+ * 1. スレッドハンドルのjoinメソッドを呼び出すことで、そのスレッドの完了を待機できる
+ * 2. joinは呼び出したスレッドをブロックし、対象スレッドが終了するまで待機する
+ * 3. スレッドの結果（戻り値）を取得できる
+ * 4. エラーハンドリングと組み合わせることができる
+ * 
+ * この例では、計算を行う別スレッドを起動し、その結果を待ち受けて表示しています。
+ */
+
 use std::thread;
 use std::time::Duration;
 
 fn main() {
-    println!("Main:start!");
-
-    let h = thread::spawn(|| {
-        thread::spawn(|| {
-            for n in 1..6 {
-                println!("H1:No,{}.", n);
-                thread::sleep(Duration::from_millis(2));
-            }
-        });
-
-        thread::spawn(|| {
-            for n in 1..6 {
-                println!("H2:No,{}.", n);
-                thread::sleep(Duration::from_millis(2));
-            }
-        });
-
-        for n in 1..6 {
-            println!("Thread:No,{}.", n);
-            thread::sleep(Duration::from_millis(1));
+    println!("メインスレッド: 開始");
+    
+    // 新しいスレッドを作成し、ハンドルを取得
+    let handle = thread::spawn(|| {
+        println!("子スレッド: 計算開始");
+        
+        // 重い計算をシミュレート
+        let mut sum = 0;
+        for i in 1..=100 {
+            sum += i;
+            thread::sleep(Duration::from_millis(5)); // 少し待機
         }
+        
+        println!("子スレッド: 計算完了");
+        
+        // スレッドの結果として合計値を返す
+        sum
     });
-
-    let _res = h.join();
-    println!("Main:End.");
+    
+    // メインスレッドでも処理を実行（並行処理）
+    for i in 1..=3 {
+        println!("メインスレッド: 別の作業実行中... ({})", i);
+        thread::sleep(Duration::from_millis(100));
+    }
+    
+    // スレッドの終了を待ち、結果を取得
+    match handle.join() {
+        Ok(result) => println!("メインスレッド: 子スレッドの結果を取得 - 合計値: {}", result),
+        Err(_) => println!("メインスレッド: 子スレッドがパニックしました"),
+    }
+    
+    println!("メインスレッド: 終了");
 }

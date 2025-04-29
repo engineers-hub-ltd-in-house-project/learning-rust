@@ -1,11 +1,34 @@
+/*
+ * 可変参照
+ *
+ * この例では、Rustの可変参照（mutable reference）の使い方を示しています。
+ * 通常の参照は値を変更することができませんが、可変参照を使うと
+ * 参照先の値を変更することができます。
+ * 
+ * 可変参照の特徴：
+ * 1. &mut キーワードで作成する
+ * 2. 元の変数も mut で宣言されている必要がある
+ * 3. 一度に一つの可変参照しか存在できない（排他的アクセス）
+ * 4. 可変参照が存在する間は不変参照も作れない
+ * 
+ * この例では、文字列を変更するために可変参照を使用しています。
+ */
+
 fn main() {
-    let mut msg = String::from("Hello!");
-    println!("msg: {}", msg);
-    print_msg(&mut msg);
-    println!("msg: {}", msg);
+    let mut message = String::from("こんにちは");
+    println!("元のメッセージ: {}", message);
+    
+    // 可変参照を渡して文字列を変更
+    modify_string(&mut message);
+    
+    // 変更後の文字列を表示
+    println!("変更後のメッセージ: {}", message);
 }
 
-fn print_msg(msg: &mut String) {
-    msg.push_str("!!!!");
-    println!("Message is \"{}\".", msg);
+// 可変参照を引数に取る関数
+fn modify_string(s: &mut String) {
+    // 可変参照を通じて値を変更する
+    s.push_str("、世界！");
+    s.insert(0, '【');
+    s.push('】');
 }
